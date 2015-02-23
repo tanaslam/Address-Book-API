@@ -1,6 +1,6 @@
 {
-  "name": "node-js-getting-started",
-  "version": "0.1.2",
+  "name": "node-js-address-book-api",
+  "version": "0.0.1",
   "description": "A sample Node.js app using Express 4",
   "main": "index.js",
   "scripts": {
@@ -24,5 +24,11 @@
     "heroku",
     "express"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/heroku/node-js-getting-started/issues"
+  },
+  "homepage": "https://github.com/heroku/node-js-getting-started",
+  "devDependencies": {},
+  "author": "Tanveer Aslam"
 }
