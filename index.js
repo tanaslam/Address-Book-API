@@ -5,7 +5,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-var ContactsModel = require('./app/models/contacts');
+var contactsModel = require('./app/models/contacts');
 
 var app = express();
 var router = express.Router();
@@ -54,7 +54,7 @@ router.route('/contacts')
 	// Contacts: GET
 	.get(function(request, response) {
 
-		ContactsModel.find(function(err, contacts) {
+		contactsModel.find(function(err, contacts) {
 			if (err) {
 				response.status(404)
 				response.json(err);
@@ -70,7 +70,7 @@ router.route('/contacts')
 router.route('/contacts/:contact_id')
 	// Contacts: params GET
 	.get(function(request, response) {
-		ContactsModel.findById(request.params.contact_id, function(err, contact) {
+		contactsModel.findById(request.params.contact_id, function(err, contact) {
 			if(err) {
 				response.json(err);
 			}
@@ -85,7 +85,7 @@ router.route('/contacts/:contact_id')
 		});
 	})
 	.delete(function(request, response) {
-		ContactsModel.findById(request.params.contact_id, function(err, contact) {
+		contactsModel.findById(request.params.contact_id, function(err, contact) {
 			if(err) {
 				response.json(err);
 			}
