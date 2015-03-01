@@ -2,6 +2,7 @@
 * A basic bootstrap that will route request to REST API
 * end points. 
 **/
+var newrelic = require('newrelic')
 var express = require('express');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
